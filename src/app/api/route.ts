@@ -28,20 +28,20 @@ export async function GET() {
 
 // GET - Récupérer une tâche par son id
 
-export async function GETTASKBYID(req: Request) {
-  try {
-    const { searchParams } = new URL(req.url);
-    const id = searchParams.get('id');
-    const tasks = await readTasksFromFile();
-    const task = tasks.find((task: any) => task.id === parseInt(id || '0'));
-    if (!task) {
-      return NextResponse.json({ message: 'Tâche non trouvée' }, { status: 404 });
-    }
-    return NextResponse.json(task, { status: 200 });
-  } catch (error) {
-    return NextResponse.json({ message: 'Erreur lors de la récupération de la tâche' }, { status: 500 });
-  }
-}
+// export async function GETTASKBYID(req: Request) {
+//   try {
+//     const { searchParams } = new URL(req.url);
+//     const id = searchParams.get('id');
+//     const tasks = await readTasksFromFile();
+//     const task = tasks.find((task: any) => task.id === parseInt(id || '0'));
+//     if (!task) {
+//       return NextResponse.json({ message: 'Tâche non trouvée' }, { status: 404 });
+//     }
+//     return NextResponse.json(task, { status: 200 });
+//   } catch (error) {
+//     return NextResponse.json({ message: 'Erreur lors de la récupération de la tâche' }, { status: 500 });
+//   }
+// }
 
 // POST - Ajouter une nouvelle tâche
 export async function POST(req: Request) {

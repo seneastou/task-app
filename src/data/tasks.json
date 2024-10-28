@@ -6,9 +6,8 @@
     "status": "Completed"
   },
   {
-    "id": 2,
-    "title": "cuisine",
-    "description": "faire des cookies pour le goûter et des beignets",
-    "status": "In Progress"
+    "id": 3,
+    "title": "Courses",
+    "description": "pâtes, patates, beurre."
   }
 ]
